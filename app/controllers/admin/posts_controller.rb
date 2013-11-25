@@ -9,7 +9,7 @@ class Admin::PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post])
-
+    p '*' * 100
     if @post.save
       flash[:notice] = "Post was successfully saved."
       redirect_to admin_post_url(@post)

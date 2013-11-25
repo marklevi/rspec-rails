@@ -1,1 +1,6 @@
-new view
+<%= form_for [:admin, @post] do |f| %>
+title:<%= f.text_field :title %>
+content:<%= f.text_field :content %>
+post_published:<%= f.check_box :is_published %>
+<%= f.submit "Save" %>
+<% end %>
